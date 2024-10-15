@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <div className='cursor-pointer'>
 
-      <div className='flex justify-around px-6 py-7 mt-2 items-center'>
+      <div className='flex justify-around px-6 py-7 mt-2 items-center relative'>
         <div>
           <div>
             <img src={logo} width={"100px"} alt="logo" />
@@ -28,6 +28,7 @@ function Navbar() {
 
           <div onMouseEnter={() => handleMouseEnter("Exams")}
             onMouseLeave={handlemouseleave}
+            className='hover:border-b-4 hover:border-[#78abfb]'
           >Exams
             {
               dropdown === "Exams" && (
@@ -52,6 +53,7 @@ function Navbar() {
 
           <div onMouseEnter={() => handleMouseEnter("Programs")}
             onMouseLeave={handlemouseleave}
+             className='hover:border-b-4 hover:border-[#78abfb]'
           >Programs
             {
               dropdown === "Programs" && (
@@ -64,7 +66,7 @@ function Navbar() {
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("Scholarships")}
-            onMouseLeave={handlemouseleave}>Scholarships
+            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Scholarships
 
             {
               dropdown === "Scholarships" && (
@@ -76,7 +78,7 @@ function Navbar() {
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("TestSeries")}
-            onMouseLeave={handlemouseleave}>Test Series
+            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Test Series
             {
               dropdown === "TestSeries" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
@@ -88,7 +90,7 @@ function Navbar() {
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("StudyMaterials")}
-            onMouseLeave={handlemouseleave}>Study Materials
+            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Study Materials
             {
               dropdown === "StudyMaterials" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
