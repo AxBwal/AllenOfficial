@@ -78,7 +78,7 @@ function Navbar() {
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("TestSeries")}
-            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Test Series
+            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Test Series <span className='relative bottom-3 right-2 bg-[#febf1c] text-black rounded-lg m-1 px-2 text-sm font-semibold'>New</span>
             {
               dropdown === "TestSeries" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
