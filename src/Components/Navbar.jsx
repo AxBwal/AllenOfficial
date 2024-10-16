@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { PiPhoneCallBold } from "react-icons/pi";
 import logo from "../assets/logo_dark.svg"
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [dropdown, setDropdown] = useState(null)
+  const navigate=useNavigate()
 
   function handleMouseEnter(menu) {
     setDropdown(menu)
@@ -20,7 +22,7 @@ function Navbar() {
       <div className='flex justify-around px-6 py-7 mt-2 items-center relative'>
         <div>
           <div>
-            <img src={logo} width={"100px"} alt="logo" />
+            <img onClick={()=>navigate("/")} src={logo} width={"100px"} alt="logo" />
           </div>
         </div>
 
@@ -58,9 +60,9 @@ function Navbar() {
             {
               dropdown === "Programs" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div className='p-2'>Online Programms</div>
-                  <div className='p-2'>Classroom Programms</div>
-                  <div className='p-2'>Distance Learning</div>
+                  <div onClick={()=>navigate("/ultimate-program-live-courses")} className='p-2  hover:bg-[#1e355f] rounded-md'>Online Programms</div>
+                  <div className='p-2  hover:bg-[#1e355f] rounded-md'>Classroom Programms</div>
+                  <div className='p-2  hover:bg-[#1e355f] rounded-md'>Distance Learning</div>
                 </div>
               )
             }
@@ -71,8 +73,8 @@ function Navbar() {
             {
               dropdown === "Scholarships" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div className='p-1'>ADSAT</div>
-                  <div className='p-1'>TALLENTEX</div>
+                  <div className='p-1  hover:bg-[#1e355f] rounded-md'>ADSAT</div>
+                  <div className='p-1  hover:bg-[#1e355f] rounded-md'>TALLENTEX</div>
                 </div>
               )
             }
@@ -82,9 +84,9 @@ function Navbar() {
             {
               dropdown === "TestSeries" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2 '><div>NEET</div> <div><MdKeyboardArrowRight /></div></div>
-                  <div className='flex justify-between items-center p-2 '><div>JEE(MAIN + ADVANCE)</div> <span><MdKeyboardArrowRight /></span></div>
-                  <div className='flex justify-between items-center p-2 '><div>JEE main</div> <span><MdKeyboardArrowRight /></span></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md '><div>NEET</div> <div><MdKeyboardArrowRight /></div></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md '><div>JEE(MAIN + ADVANCE)</div> <span><MdKeyboardArrowRight /></span></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md '><div>JEE main</div> <span><MdKeyboardArrowRight /></span></div>
                 </div>
               )
             }
@@ -94,12 +96,12 @@ function Navbar() {
             {
               dropdown === "StudyMaterials" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2'><div>JEE MAIN</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2'><div>JEE Advanced</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2'><div>NEET</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2'><div>NCERT Solutions</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2'><div>CBSE</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2'><div>Olympiad</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>JEE MAIN</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>JEE Advanced</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>NEET</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>NCERT Solutions</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>CBSE</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>Olympiad</div> <MdKeyboardArrowRight /></div>
 
                 </div>
               )
