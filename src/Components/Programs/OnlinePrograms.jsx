@@ -5,7 +5,7 @@ import SubjectGrid from '../SubjectGrid';
 
 function OnlinePrograms() {
   return (
-    <div className='flex flex-col mt-3 p-5'>
+    <div className='flex flex-col mt-3 px-5'>
       <div className='flex flex-col gap-5'>
         <div className='flex  px-10 gap-3 items-center'>Home <MdKeyboardArrowRight /> Online Programs </div>
 
@@ -19,7 +19,9 @@ function OnlinePrograms() {
         <img width={"500px"} src={pic1} alt="onlineprogram" />
 
       </div>
+      <div className='flex justify-center'>
       <SubjectGrid/>
+      </div>
     </div>
   )
 }

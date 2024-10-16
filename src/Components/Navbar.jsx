@@ -35,15 +35,15 @@ function Navbar() {
             {
               dropdown === "Exams" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#1e355f] rounded-md'>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md'>
                     <div>NEET</div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#1e355f] rounded-md'>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md'>
                     <div>JEE</div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#1e355f] rounded-md'>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md'>
                     <div>Class 6-10</div>
                     <MdKeyboardArrowRight />
                   </div>
@@ -60,9 +60,9 @@ function Navbar() {
             {
               dropdown === "Programs" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div onClick={()=>navigate("/ultimate-program-live-courses")} className='p-2  hover:bg-[#1e355f] rounded-md'>Online Programms</div>
-                  <div className='p-2  hover:bg-[#1e355f] rounded-md'>Classroom Programms</div>
-                  <div className='p-2  hover:bg-[#1e355f] rounded-md'>Distance Learning</div>
+                  <div onClick={()=>navigate("/ultimate-program-live-courses")} className='p-2  hover:bg-[#78abfb] rounded-md'>Online Programms</div>
+                  <div className='p-2  hover:bg-[#78abfb] rounded-md'>Classroom Programms</div>
+                  <div className='p-2  hover:bg-[#78abfb] rounded-md'>Distance Learning</div>
                 </div>
               )
             }
@@ -73,8 +73,8 @@ function Navbar() {
             {
               dropdown === "Scholarships" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div className='p-1  hover:bg-[#1e355f] rounded-md'>ADSAT</div>
-                  <div className='p-1  hover:bg-[#1e355f] rounded-md'>TALLENTEX</div>
+                  <div className='p-1  hover:bg-[#78abfb] rounded-md'>ADSAT</div>
+                  <div className='p-1  hover:bg-[#78abfb] rounded-md'>TALLENTEX</div>
                 </div>
               )
             }
@@ -84,9 +84,9 @@ function Navbar() {
             {
               dropdown === "TestSeries" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md '><div>NEET</div> <div><MdKeyboardArrowRight /></div></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md '><div>JEE(MAIN + ADVANCE)</div> <span><MdKeyboardArrowRight /></span></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md '><div>JEE main</div> <span><MdKeyboardArrowRight /></span></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md '><div>NEET</div> <div><MdKeyboardArrowRight /></div></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md '><div>JEE(MAIN + ADVANCE)</div> <span><MdKeyboardArrowRight /></span></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md '><div>JEE main</div> <span><MdKeyboardArrowRight /></span></div>
                 </div>
               )
             }
@@ -96,12 +96,12 @@ function Navbar() {
             {
               dropdown === "StudyMaterials" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>JEE MAIN</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>JEE Advanced</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>NEET</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>NCERT Solutions</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>CBSE</div> <MdKeyboardArrowRight /></div>
-                  <div className='flex justify-between items-center p-2  hover:bg-[#1e355f] rounded-md'><div>Olympiad</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md'><div>JEE MAIN</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md'><div>JEE Advanced</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md'><div>NEET</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md'><div>NCERT Solutions</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md'><div>CBSE</div> <MdKeyboardArrowRight /></div>
+                  <div className='flex justify-between items-center p-2  hover:bg-[#78abfb] rounded-md'><div>Olympiad</div> <MdKeyboardArrowRight /></div>
 
                 </div>
               )

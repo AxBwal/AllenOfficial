@@ -9,7 +9,9 @@ function App() {
   return (
     <div className='bg-[#0f1825] text-white'>
       <div className='flex flex-col gap-6'>
+      <div className='sticky top-0 z-5 bg-[#0f1825] shadow-sm '>
       <Navbar />
+      </div>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/ultimate-program-live-courses' element={<OnlinePrograms/>}/>
