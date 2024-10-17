@@ -30,7 +30,7 @@ function Navbar() {
 
           <div onMouseEnter={() => handleMouseEnter("Exams")}
             onMouseLeave={handlemouseleave}
-            className='hover:border-b-4 hover:border-[#78abfb]'
+            className="border-b-4 border-transparent hover:border-[#78abfb]"
           >Exams
             {
               dropdown === "Exams" && (
