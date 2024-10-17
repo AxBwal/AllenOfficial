@@ -2,12 +2,14 @@ import React from 'react'
 import pic1 from "../../assets/onlineprogram1.webp"
 import { MdKeyboardArrowRight } from "react-icons/md";
 import SubjectGrid from '../SubjectGrid';
+import { useNavigate } from 'react-router-dom';
 
 function OnlinePrograms() {
+  const navigate=useNavigate()
   return (
     <div className='flex flex-col mt-3 px-5'>
       <div className='flex flex-col gap-5'>
-        <div className='flex  px-10 gap-3 items-center'>Home <MdKeyboardArrowRight /> Online Programs </div>
+        <div className='flex  px-10 gap-3 items-center cursor-pointer'><span className='cursor-pointer' onClick={()=>navigate("/")}>Home</span> <MdKeyboardArrowRight /> Online Programs </div>
 
         <h1 className='font-semibold text-4xl  px-10'>Online Programs</h1>
       </div>
