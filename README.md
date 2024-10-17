@@ -1,8 +1,9 @@
-# React + Vite
+# Allen Official
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a complete clone of the official Allen website (allen.in). I am a student of Cohort 3.0 of 100xDevs and currently in the learning phase.
 
-Currently, two official plugins are available:
+Please do not contribute or raise any pull requests to this project. You are welcome to clone it and build upon it for your own use, but I kindly ask that you refrain from submitting any changes here. I hope you understand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Thank you for your cooperation.
+
+Let's keep our heads down and work in peace.
