@@ -73,7 +73,7 @@ function Navbar() {
             {
               dropdown === "Scholarships" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div className='p-1  hover:bg-[#78abfb] rounded-md'>ADSAT</div>
+                  <div onClick={()=>navigate("adsat-register")} className='p-1  hover:bg-[#78abfb] rounded-md'>ADSAT</div>
                   <div className='p-1  hover:bg-[#78abfb] rounded-md'>TALLENTEX</div>
                 </div>
               )

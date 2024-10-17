@@ -4,6 +4,7 @@ import Footer from './Components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import OnlinePrograms from './Components/Programs/OnlinePrograms'
 import Home from './pages/Home'
+import ADSAT from './Components/Programs/ADSAT'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/ultimate-program-live-courses' element={<OnlinePrograms/>}/>
+        <Route path='/adsat-register' element={<ADSAT/>}/>
       </Routes>
       <Footer />
       </div>
