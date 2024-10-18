@@ -9,7 +9,7 @@ function ClassroomBased() {
                 <div className='flex flex-col gap-7 px-5'>
                     <div className='text-2xl text-[#bbc2d1] font-semibold flex flex-col gap-3'><span>Present in 53 cities with</span>
                         <span>250+ classrooms</span></div>
-                <div className='bg-white text-black rounded-xl w-fit px-6 py-3'>Find a Centre</div>
+                <div className='bg-white text-black rounded-xl w-fit px-6 py-3 cursor-pointer hover:bg-[#5b6170]'>Find a Centre</div>
                 </div>
                 <div>
                     <img width={"300px"} src={classrombased} alt="" />

@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [dropdown, setDropdown] = useState(null)
-  const navigate=useNavigate()
+  const [subdropdown, setSubDropdown] = useState(null)
+  const navigate = useNavigate()
 
   function handleMouseEnter(menu) {
     setDropdown(menu)
@@ -14,6 +15,13 @@ function Navbar() {
 
   function handlemouseleave() {
     setDropdown(null)
+    setSubDropdown(null)
+  }
+  function subhandlemouseEnter(subMenu) {
+    setSubDropdown(subMenu)
+  }
+  function subhandlemouseleave() {
+    setSubDropdown(null)
   }
 
   return (
@@ -22,7 +30,7 @@ function Navbar() {
       <div className='flex justify-around px-6 py-7 mt-2 items-center relative'>
         <div>
           <div>
-            <img onClick={()=>navigate("/")} src={logo} width={"100px"} alt="logo" />
+            <img onClick={() => navigate("/")} src={logo} width={"100px"} alt="logo" />
           </div>
         </div>
 
@@ -35,16 +43,48 @@ function Navbar() {
             {
               dropdown === "Exams" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md'>
-                    <div>NEET</div>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("NEET")} onMouseLeave={subhandlemouseleave}>
+                    <div>NEET
+                      {
+                        subdropdown === "NEET" && (
+                          <div className='absolute px-4 left-full top-0 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
+                            <div>Class 11th</div>
+                            <div>Class 12th</div>
+                            <div>Class 12th plus</div>
+                          </div>
+                        )
+                      }
+                    </div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md'>
-                    <div>JEE</div>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("JEE")} onMouseLeave={subhandlemouseleave}>
+                    <div>JEE
+                    {
+                        subdropdown === "JEE" && (
+                          <div className='absolute px-4 left-full top-14 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
+                            <div>Class 11th</div>
+                            <div>Class 12th</div>
+                            <div>Class 12th plus</div>
+                          </div>
+                        )
+                      }
+                    </div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md'>
-                    <div>Class 6-10</div>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("class610")} onMouseLeave={subhandlemouseleave}>
+                    <div>Class 6-10
+                    {
+                        subdropdown === "class610" && (
+                          <div className='absolute px-4 left-full top-28 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
+                            <div>Class 6th</div>
+                            <div>Class 7th</div>
+                            <div>Class 8th</div>
+                            <div>Class 9th</div>
+                            <div>Class 10th</div>
+                          </div>
+                        )
+                      }
+                    </div>
                     <MdKeyboardArrowRight />
                   </div>
                 </div>
@@ -55,12 +95,12 @@ function Navbar() {
 
           <div onMouseEnter={() => handleMouseEnter("Programs")}
             onMouseLeave={handlemouseleave}
-             className='hover:border-b-4 hover:border-[#78abfb]'
+            className='hover:border-b-4 hover:border-[#78abfb]'
           >Programs
             {
               dropdown === "Programs" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div onClick={()=>navigate("/ultimate-program-live-courses")} className='p-2  hover:bg-[#78abfb] rounded-md'>Online Programms</div>
+                  <div onClick={() => navigate("/ultimate-program-live-courses")} className='p-2  hover:bg-[#78abfb] rounded-md'>Online Programms</div>
                   <div className='p-2  hover:bg-[#78abfb] rounded-md'>Classroom Programms</div>
                   <div className='p-2  hover:bg-[#78abfb] rounded-md'>Distance Learning</div>
                 </div>
@@ -68,19 +108,19 @@ function Navbar() {
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("Scholarships")}
-            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Scholarships
+            onMouseLeave={handlemouseleave} className='hover:border-b-4 hover:border-[#78abfb]'>Scholarships
 
             {
               dropdown === "Scholarships" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
-                  <div onClick={()=>navigate("adsat-register")} className='p-1  hover:bg-[#78abfb] rounded-md'>ADSAT</div>
+                  <div onClick={() => navigate("adsat-register")} className='p-1  hover:bg-[#78abfb] rounded-md'>ADSAT</div>
                   <div className='p-1  hover:bg-[#78abfb] rounded-md'>TALLENTEX</div>
                 </div>
               )
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("TestSeries")}
-            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Test Series <span className='relative bottom-3 right-2 bg-[#febf1c] text-black rounded-lg m-1 px-2 text-sm font-semibold'>New</span>
+            onMouseLeave={handlemouseleave} className='hover:border-b-4 hover:border-[#78abfb]'>Test Series <span className='relative bottom-3 right-2 bg-[#febf1c] text-black rounded-lg m-1 px-2 text-sm font-semibold'>New</span>
             {
               dropdown === "TestSeries" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
@@ -92,7 +132,7 @@ function Navbar() {
             }
           </div>
           <div onMouseEnter={() => handleMouseEnter("StudyMaterials")}
-            onMouseLeave={handlemouseleave}  className='hover:border-b-4 hover:border-[#78abfb]'>Study Materials
+            onMouseLeave={handlemouseleave} className='hover:border-b-4 hover:border-[#78abfb]'>Study Materials
             {
               dropdown === "StudyMaterials" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
@@ -117,7 +157,7 @@ function Navbar() {
 
 
 
-          <div className='px-4 py-2 border rounded-full'>Login</div>
+          <div className='px-4 py-2 border rounded-full hover:bg-[#274278]'>Login</div>
         </div>
       </div>
 
