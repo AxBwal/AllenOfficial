@@ -20,8 +20,8 @@ function Navbar() {
   function subhandlemouseEnter(subMenu) {
     setSubDropdown(subMenu)
   }
-  function subhandlemouseleave() {
-    setSubDropdown(null)
+  function subhandlemouseleave(menu) {
+    setSubDropdown(menu)
   }
 
   return (
@@ -43,44 +43,44 @@ function Navbar() {
             {
               dropdown === "Exams" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("NEET")} onMouseLeave={subhandlemouseleave}>
+                  <div className='flex justify-between items-center p-2 hover:bg-[rgb(120,171,251)] rounded-md' onMouseEnter={() => subhandlemouseEnter("NEET")} onMouseLeave={()=>subhandlemouseleave("NEET")}>
                     <div>NEET
                       {
                         subdropdown === "NEET" && (
                           <div className='absolute px-4 left-full top-0 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
-                            <div>Class 11th</div>
-                            <div>Class 12th</div>
-                            <div>Class 12th plus</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 11th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th plus</div>
                           </div>
                         )
                       }
                     </div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("JEE")} onMouseLeave={subhandlemouseleave}>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("JEE")} onMouseLeave={()=>subhandlemouseleave("JEE")}>
                     <div>JEE
                     {
                         subdropdown === "JEE" && (
                           <div className='absolute px-4 left-full top-14 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
-                            <div>Class 11th</div>
-                            <div>Class 12th</div>
-                            <div>Class 12th plus</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 11th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th plus</div>
                           </div>
                         )
                       }
                     </div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("class610")} onMouseLeave={subhandlemouseleave}>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("class610")} onMouseLeave={()=>subhandlemouseleave("class610")}>
                     <div>Class 6-10
                     {
                         subdropdown === "class610" && (
                           <div className='absolute px-4 left-full top-28 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
-                            <div>Class 6th</div>
-                            <div>Class 7th</div>
-                            <div>Class 8th</div>
-                            <div>Class 9th</div>
-                            <div>Class 10th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 6th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 7th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 8th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 9th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 10th</div>
                           </div>
                         )
                       }
