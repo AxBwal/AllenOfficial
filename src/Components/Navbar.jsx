@@ -48,7 +48,7 @@ function Navbar() {
                       {
                         subdropdown === "NEET" && (
                           <div className='absolute px-4 left-full top-0 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
-                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 11th</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md' onClick={()=>navigate("neet/online-coaching-class-11")}>Class 11th</div>
                             <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th</div>
                             <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th plus</div>
                           </div>

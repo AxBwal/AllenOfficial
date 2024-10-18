@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import OnlinePrograms from './Components/Programs/OnlinePrograms'
 import Home from './pages/Home'
 import ADSAT from './Components/Programs/ADSAT'
+import NeetRoute from './Routes/NEET Route/NeetRoute'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/ultimate-program-live-courses' element={<OnlinePrograms/>}/>
         <Route path='/adsat-register' element={<ADSAT/>}/>
       </Routes>
+      <NeetRoute/>
       <Footer />
       </div>
 
