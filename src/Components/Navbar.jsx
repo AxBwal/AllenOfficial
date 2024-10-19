@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { PiPhoneCallBold } from "react-icons/pi";
 import logo from "../assets/logo_dark.svg"
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [dropdown, setDropdown] = useState(null)
@@ -43,23 +43,23 @@ function Navbar() {
             {
               dropdown === "Exams" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] space-y-2 rounded-lg'>
-                  <div className='flex justify-between items-center p-2 hover:bg-[rgb(120,171,251)] rounded-md' onMouseEnter={() => subhandlemouseEnter("NEET")} onMouseLeave={()=>subhandlemouseleave("NEET")}>
+                  <div className='flex justify-between items-center p-2 hover:bg-[rgb(120,171,251)] rounded-md' onMouseEnter={() => subhandlemouseEnter("NEET")} onMouseLeave={() => subhandlemouseleave("NEET")}>
                     <div>NEET
                       {
                         subdropdown === "NEET" && (
                           <div className='absolute px-4 left-full top-0 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
-                            <div className='hover:bg-[#78abfb] p-2 rounded-md' onClick={()=>navigate("neet/online-coaching-class-11")}>Class 11th</div>
-                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th</div>
-                            <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th plus</div>
+                            <div className='hover:bg-[#78abfb] p-2 rounded-md' onClick={() => navigate("neet/online-coaching-class-11")}>Class 11th</div>
+                            <div onClick={() => navigate("neet/online-coaching-class-12")} className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th</div>
+                            <div onClick={() => navigate("neet/online-coaching-class-12-droppers")} className='hover:bg-[#78abfb] p-2 rounded-md'>Class 12th plus</div>
                           </div>
                         )
                       }
                     </div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("JEE")} onMouseLeave={()=>subhandlemouseleave("JEE")}>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("JEE")} onMouseLeave={() => subhandlemouseleave("JEE")}>
                     <div>JEE
-                    {
+                      {
                         subdropdown === "JEE" && (
                           <div className='absolute px-4 left-full top-14 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
                             <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 11th</div>
@@ -71,9 +71,9 @@ function Navbar() {
                     </div>
                     <MdKeyboardArrowRight />
                   </div>
-                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("class610")} onMouseLeave={()=>subhandlemouseleave("class610")}>
+                  <div className='flex justify-between items-center p-2 hover:bg-[#78abfb] rounded-md' onMouseEnter={() => subhandlemouseEnter("class610")} onMouseLeave={() => subhandlemouseleave("class610")}>
                     <div>Class 6-10
-                    {
+                      {
                         subdropdown === "class610" && (
                           <div className='absolute px-4 left-full top-28 ml-2 w-[180px] py-3 bg-[#274278] rounded-lg space-y-3'>
                             <div className='hover:bg-[#78abfb] p-2 rounded-md'>Class 6th</div>
@@ -101,8 +101,12 @@ function Navbar() {
               dropdown === "Programs" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
                   <div onClick={() => navigate("/ultimate-program-live-courses")} className='p-2  hover:bg-[#78abfb] rounded-md'>Online Programms</div>
-                  <div className='p-2  hover:bg-[#78abfb] rounded-md'>Classroom Programms</div>
-                  <div className='p-2  hover:bg-[#78abfb] rounded-md'>Distance Learning</div>
+                  <div className='p-2  hover:bg-[#78abfb] rounded-md'>
+                    <NavLink to="https://www.allen.ac.in/" target='_blank'>Classroom Programms</NavLink>
+                  </div>
+                  <div className='p-2  hover:bg-[#78abfb] rounded-md'>
+                    <NavLink to="https://dlp.allen.ac.in/" target='_blank'>Distance Learning</NavLink>
+                  </div>
                 </div>
               )
             }
@@ -114,7 +118,10 @@ function Navbar() {
               dropdown === "Scholarships" && (
                 <div className='absolute mt-2 p-3 bg-[#274278] rounded-lg space-y-2'>
                   <div onClick={() => navigate("adsat-register")} className='p-1  hover:bg-[#78abfb] rounded-md'>ADSAT</div>
-                  <div className='p-1  hover:bg-[#78abfb] rounded-md'>TALLENTEX</div>
+                  <div className='p-1  hover:bg-[#78abfb] rounded-md'>
+                  <NavLink to="https://studyonline.tallentex.com/" target='_blank'>TALLENTEX</NavLink>
+                    
+                    </div>
                 </div>
               )
             }
