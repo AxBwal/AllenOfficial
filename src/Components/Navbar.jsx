@@ -3,11 +3,17 @@ import { PiPhoneCallBold } from "react-icons/pi";
 import logo from "../assets/logo_dark.svg"
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink, useNavigate } from 'react-router-dom';
+import Login from '../pages/Login';
 
 function Navbar() {
+  const[loginclose,setLoginClose]=useState(false)
   const [dropdown, setDropdown] = useState(null)
   const [subdropdown, setSubDropdown] = useState(null)
   const navigate = useNavigate()
+
+  function toggleLogin(){ 
+    setLoginClose(!loginclose)
+  }
 
   function handleMouseEnter(menu) {
     setDropdown(menu)
@@ -164,8 +170,20 @@ function Navbar() {
 
 
 
-          <div className='px-4 py-2 border rounded-full hover:bg-[#274278]'>Login</div>
+          <div onClick={toggleLogin}>
+            <div className='px-4 py-2 border rounded-full hover:bg-[#274278]'>Login</div>
+          </div>
         </div>
+
+        {
+          loginclose && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-10">
+              <div className={`fixed top-0 right-0 h-full w-[450px] bg-[#13203b] z-20 transform transition-transform duration-300 ${loginclose ? 'translate-x-0' : 'translate-x-full'}`}>
+                <Login closeLogin={toggleLogin}/>
+              </div>
+            </div>
+          )
+        }
       </div>
 
 
