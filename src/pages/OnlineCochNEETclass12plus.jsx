@@ -12,14 +12,14 @@ function OnlineCochNEETclass12plus() {
                 <div className='flex justify-center'>
                     <img src={NEET1} alt="NEET1" width={"900px"}  />
                 </div>
-                <h1 className='text-2xl font-semibold'>NEET programs for Class 12th Plus</h1>
-                <div className='text-[#bbc2d1] flex'>
+                <h1 className='text-2xl font-semibold mt-5 px-20'>NEET programs for Class 12th Plus</h1>
+                <div className='text-[#bbc2d1] flex px-20 gap-4 mt-4'>
                     <button className='flex border rounded-lg items-center gap-2 px-5 py-1'> <RiLiveLine />Live</button>
                     <button className='flex border rounded-lg items-center gap-2 px-5 py-1'> <SlNote />Online Test Series</button>
                     <button className='flex border rounded-lg items-center gap-2 px-5 py-1'> <PiVideoDuotone />Recorded</button>
                     <button className='flex border rounded-lg items-center gap-2 px-5 py-1'>Practice</button>
                 </div>
-                <div className='flex justify-center'>
+                <div className='flex justify-center mt-5'>
                     <img src={NEET2} alt="NEET2" width={"900px"} />
                 </div>
             </div>

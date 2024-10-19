@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import sorry from "../../assets/subjectgrid/sorry.png"
 import SubjectGrid from '../SubjectGrid'
+import { FaChevronDown } from "react-icons/fa";
 
 const faqadsat=[
     {
@@ -61,18 +62,18 @@ function ADSAT() {
   return (
     <div>
         <div>
-            <img src={sorry} alt="" />
+            <img src={sorry} alt="sorry" />
         </div>
-        <div>
+        <div className='mt-5'>
             <SubjectGrid/>
         </div>
 
         <div>
-            <h1>Frequently Asked Questions</h1>
+            <h1 className='text-center font-semibold text-4xl mt-6'>Frequently Asked Questions</h1>
             {
                 faqadsat.map((item)=>{
-                    return <div key={item.id} className='p-3'>
-                        <div onClick={()=>idupdate(item.id)}>{item.question}</div>
+                    return <div key={item.id} className='p-5 cursor-pointer mx-auto w-[600px] bg-[#13203b] mt-4'>
+                        <div className='flex justify-between' onClick={()=>idupdate(item.id)}>{item.question} <span className='flex items-center'><FaChevronDown /></span></div>
 
                         {
                             openid ===item.id && (
